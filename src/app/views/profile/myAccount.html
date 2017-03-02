@@ -1,21 +1,30 @@
 <div class="profile">
-    <ul class="myAccount">
-        <li>
-            <span class="spa">客户编号 :</span>
-            <input class="inp inp0" type="text" value="{{accountNum}}">
-            <span class="remark0">(客户在公司编号，不可修改 )</span>
-        </li>
-        <li>
-            <span class="spa">登录名 :</span>
-            <input class="inp" type="text" value="{{accountName}}">
-        </li>
-        <li>
-            <span class="spa">客户名称 :</span>
-            <input class="inp" type="text" value="{{name}}">
-        </li>
-        <li>
-            <span class="spa">联系手机 :</span>
-            <input class="inp" type="text" value="{{phone}}">
-        </li>
-    </ul>
+    <form action="">
+        <div class="title">
+            <p class="title_name">
+               {{companyName}}<span>{{role}}</span>
+            </p>
+            <div class="title_photo">
+                <img src="views/profile/img/photo.png" alt="">
+            </div>
+        </div>
+        <ul class="myAccount">
+            <li>
+                <label class="spa" for="aNum">客户编号 :</label>
+                <input class="inp" id="aNum" type="text" value="{{accountNum}}"  readonly="readonly">
+            </li>
+            <li>
+                <label class="spa" for="aName">登录名 :</label>
+                <input class="inp" id="aName" type="text" value="{{accountName}}" readonly="readonly">
+            </li>
+            <li>
+                <label class="spa" for="aCompany">客户名称 :</label>
+                <input class="inp" id="aCompany" type="text" value="{{name}}" readonly="readonly">
+            </li>
+            <li>
+                <label class="spa" for="aPhone">联系手机 :</label>
+                <input class="inp" type="text" id="aPhone" value="{{phone}}" readonly="readonly">
+            </li>
+        </ul>
+</form>
 </div>

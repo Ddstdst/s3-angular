@@ -1,8 +1,15 @@
 /**
  * Created by chent on 2017/1/18.
+ *
+ *  OrderService
+ *  订单服务，处理订单相关的数据接口
+ *  getOrderStatusArray : 获取订单状态
+ *  getOrderList : 获取订单列表(分页)
+ *  getOrderDetail :  获取订单详情(送货地址也许要另取 看后台接口)
+ *
+ *
  */
-angular.module("myApp")
-    .service("OrderService",['$es',function($es){
+angular.module("myApp").service("OrderService",['$es',function($es){
     
         this.getOrderStatusArray = function(){
             return [
@@ -72,8 +79,6 @@ angular.module("myApp")
                 orderList:orderList
             }
         };
-    }])
-    .service("OrderDetailService",['$es',function($es){
 
         this.getOrderDetail = function(orderId){
             //get orderDetail

@@ -8,6 +8,9 @@ span,i,em{display:inline-block;}
 html{background-color: #F2F2F2;}
 
 .main{width:100%;}
+.profile .error{border:1px solid red !important;}
+.profile .seccess{border:1px solid #009A61 !important;}
+.profile .btn{width: 7rem;height: 3rem;background-color: #2D83CE;border: none;border-radius: 5px;color: #fff;margin-left: 25%;}
 .profile input{outline: none;}
 .profile .header{position: relative;z-index: 2000;}
 .profile .shadow{display:none;width:100%;height:100%;position: fixed;left:0;top:0;z-index: 1200;background-color: #F1F1F1;opacity: 0.5;}
@@ -44,9 +47,9 @@ html{background-color: #F2F2F2;}
 .profile .addAddress .add_line{width:100%;height:1.1rem;background-color:#F2F2F2;}
 .profile .addAddress .add_list{width:100%;height:100%;background-color: #fff;border-bottom:1px solid #F0F0F0;}
 
-.profile .addAddress .add_list>li{width:95%;height:3.3rem;line-height:3.3rem;font-size:1.23rem;color:#696969;border-bottom: 1px solid #F2F2F2;margin:0 auto;}
+.profile .addAddress .add_list>li{width:95%;height:3.3rem;line-height:3.3rem;font-size:1.23rem;color:#696969;border-bottom: 1px solid #F2F2F2;margin:0 auto;overflow: hidden;}
 .profile .addAddress .add_list>li>span{display: inline-block;width:20%;text-align: right;}
-.profile .addAddress .add_list>li>input{display: inline-block;width:75%;height:3rem;border:none;float: right;position:relative;top:0.15rem}
+.profile .addAddress .add_list>li>input{display: inline-block;width:75%;height:3rem;padding-left:1rem;border:none;float: right;position:relative;top:0.15rem}
 .profile .addAddress .city{float:right;display: inline-block;width:0.63rem;height:0.56rem;margin-top:4.5%;margin-right:3%;background:url("../img/addAddress_icon.png") no-repeat;background-size:100% 100%;}
 .profile .addAddress .defultAddress{height:1.5rem;line-height: 1.5rem;font-size:1rem;margin:1rem 0 0 2rem;}
 .profile .addAddress .defultAddress>span{display: inline-block;width:1.5rem;height:1.5rem;margin-right:0.6rem;border-radius: 50%;background-color: #FB3E50;position:relative;top:21%;}
@@ -63,11 +66,8 @@ html{background-color: #F2F2F2;}
 .profile .edit_left{width:50%;height:2.6rem;float: left;}
 .profile .edit_right{width:50%;height:2.6rem;float:right;position: relative;}
 
-/*样式修改    2.23                  */
-/*.profile .edit_left>span{display: inline-block;width:1.5rem;height:1.5rem;margin-right:0.6rem;border-radius: 50%;background-color: #FB3E50;position:relative;top:21%;}*/
-/*.profile .edit_left>span>i{display: inline-block;width:1.5rem;height:1.5rem;background:url('../img/checked.png') no-repeat;background-size: 80% 80%;position:relative;left:14%;top:10%;}*/
 .profile .edit_left>i{position:relative;left:-2%;top:6%;}
-.profile .myAddress_list li:nth-child(1) i{color:#FB3E50;}
+.profile .myAddress_list li i{color:#FB3E50;}
 
 .profile .myAddress_btn{width:95%;height:2.9rem;line-height: 2.9rem;text-align:center;color:#fff;border-radius:10px;margin:5.3rem auto 6rem auto;background-color: #2F83CE;}
 .profile .myAddress_btn>span{display: inline-block;width:1.4rem;height:1.4rem;margin-right:1rem;background:url("../img/addAddress_icon01.png") no-repeat;background-size:100% 100%;position:relative;top:10%;}
@@ -76,10 +76,74 @@ html{background-color: #F2F2F2;}
 .profile .sc{background:url("../img/delete.png") no-repeat;background-size:100% 100%;}
 
 /*账户信息*/
+.profile .title{width:100%;height:7rem;border-bottom: 1px solid #F0F0F0;overflow: hidden;position:relative;}
+.profile .title_name{width:60%;height:7rem;line-height: 7rem;font-size:1.2rem;color:#10A6EB;float: left;margin-left:1.5rem;}
+.profile .title_name>span{width: 3.3rem;height: 1.3rem;font-size: 0.7rem;background-color: #2D83CE;border-radius: 3px;color: #fff;position: relative;text-align: center;line-height: 1.4rem;margin-left: 0.5rem;}
+.profile .title_photo{width: 5rem;height: 5rem;border: 2px solid #fff;border-radius: 50%;overflow: hidden;position:absolute;right:1.5rem;top:50%;margin-top:-2.5rem;}
+.profile .title_photo>img{width:100%;height:100%;}
 .profile .myAccount{width:100%;}
-.profile .myAccount span,input{display: inline-block}
+.profile .myAccount label,input{display: inline-block}
 .profile .myAccount>li{width:100%;height:4rem;line-height: 4rem;border-bottom:1px solid #F0F0F0;overflow: hidden;background-color: #fff;}
-.profile .myAccount>li>.spa{text-align: left;font-size:1.2rem;color:#4C4B4B;margin-left:1.5rem;}
-.profile .myAccount>li>.inp{width:70%;color:#989898;outline: none;font-size: 1.1rem;border:none;}
-.profile .myAccount>li>.inp0{width:21%;}
+.profile .myAccount>li>.spa{font-weight:normal;text-align: left;font-size:1.2rem;color:#4C4B4B;margin-left:1.5rem;}
+.profile .myAccount>li>.inp{width:70%;height:4rem;color:#989898;outline: none;font-size: 1.1rem;border:none;text-align: right;float:right;margin-right:1.5rem;}
 .profile .myAccount>li>.remark0{width:50%;font-size:1rem;color:#F9AF87;}
+
+
+/*省市样式*/
+.iphone { width: 384px; height: 799px; padding: 182px 32px 157px; margin: 10px auto; }
+.browser { position: relative; width: 320px; height: 460px; overflow: hidden; }
+@media (min-width: 721px) and (max-width: 1300px) {
+    .iphone { width: 270px; height: 562px; padding: 128px 23px 111px; margin: 20px auto; background-size: 270px 562px; }
+    .browser { width: 224px; height: 323px; }
+}
+@media (max-width: 720px) {
+    .iphone { width: 100%; height: 100%; padding: 0; background: none; }
+    .browser { width: 100%; height: 100%; }
+}
+/*选择地区*/
+.express-area {  margin-top: .25rem; margin-bottom: .25rem; background-color: #fff; position:relative;top:-31%;}
+.express-area a { display: block; padding: .5rem; background: url(../img/link-arrow.png) no-repeat 98% 50%; background-size: .55rem .55rem; }
+.express-area dl { position: relative; line-height: 1.2rem; color: #4d525d; }
+.express-area dl dt { position: absolute; top: 0; left: 2%; font-size: 1.2rem; line-height: 1.2rem; font-weight: normal; }
+.express-area dl dd { padding-top: .1rem;  margin-left: 7.5rem; text-align: justify; font-size: 1.2rem; line-height: 1rem; }
+@media (min-width: 721px) and (max-width: 1300px) {
+    .express-area a { padding: .3rem; }
+    .express-area dl dt { font-size: .5rem; line-height: 1rem; }
+    .express-area dl dd { padding-right: .6rem; margin-left: 3rem; font-size: .4rem; line-height: .8rem; }
+}
+/*选择地区弹层*/
+.express-area-box { position: absolute; bottom: -100%; left: 50%; z-index: 15; width: 320px; margin-left: -160px; background-color: #fff; color: #4d525d; }
+.express-area-box header { position: relative; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; }
+.express-area-box header h3 { margin: 0 1.675rem; text-align: center; font-size: .8rem; line-height: 2.25rem; }
+.express-area-box header .back,
+.express-area-box header .close { position: absolute; top: 0; width: 1.675rem; height: 2.25rem; }
+.express-area-box header .back { display: none; left: 0; background: url(../img/back.png) no-repeat center;   background-size: .45rem .75rem; }
+.express-area-box header .close { right: 0; background: url(../img/close-area.png) no-repeat center; background-size: .675rem .675rem; }
+.express-area-box article { height: 250px; overflow-y: scroll; }
+.area-list li { padding: .5rem; border-bottom: 1px solid #e2e2e2; text-align: justify; font-size: .7rem; line-height: 1.25rem; }
+@media (min-width: 721px) and (max-width: 1300px) {
+    .express-area-box { width: 224px; margin-left: -112px; }
+    .express-area-box header h3 { font-size: .7rem; line-height: 1.7rem; }
+    .express-area-box header .back,
+    .express-area-box header .close { height: 1.7rem; }
+    .express-area-box article { height: 120px; }
+    .area-list li { padding: .3rem; font-size: .6rem; line-height: 1rem; }
+}
+@media (max-width: 720px) {
+    .express-area-box { position: fixed; left: 0; width: 100%; margin-left: 0; }
+}
+/*遮罩层*/
+.mask { display: none; position: absolute; top: 0; left: 0; z-index: 12; width: 100%; height: 100%; background-color: rgba(0,0,0,.5); }
+@media (max-width: 720px) {
+    .mask {
+        position: fixed;
+    }
+
+    .area-list {
+        overflow: auto;
+    }
+
+    #areaLayer {
+        display: none;
+    }
+}

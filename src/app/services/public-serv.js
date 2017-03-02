@@ -1,5 +1,12 @@
-angular.module("myApp")
-    .service("MyappService",['$es',function($es){
+/**
+ *
+ * PublicService
+ *  用来获取公共信息
+ *  以及后续用来读配置
+ *
+ */
+
+angular.module("myApp").service("PublicService",['$es',function($es){
 
         var myappManage = $es.getConfig('custid');
 

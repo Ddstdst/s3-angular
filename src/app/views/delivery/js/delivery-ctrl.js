@@ -53,10 +53,10 @@ angular.module("myApp").controller("DeliveryListCtrl",["$scope","$rootScope","De
     initPage();
 }]);
 
-myApp.controller("DeliveryDetailCtrl",["$scope","$rootScope",'$stateParams','DeliveryDetailService',function ($scope,$rootScope,$stateParams,DeliveryDetailService) {
+myApp.controller("DeliveryDetailCtrl",["$scope","$rootScope",'$stateParams','DeliveryService',function ($scope,$rootScope,$stateParams,DeliveryService) {
     //取得传过来的参数
     var deliveryId = $stateParams.deliveryId;
-    $scope.delivery = DeliveryDetailService.getDeliveryDetail(deliveryId);
+    $scope.delivery = DeliveryService.getDeliveryDetail(deliveryId);
     //var deliveryNum = $stateParams.deliveryNum;
     //$scope.delivery = DeliveryDetailService.getDeliveryDetail(deliveryId,deliveryNum);
 

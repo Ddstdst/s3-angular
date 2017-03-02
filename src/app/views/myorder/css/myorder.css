@@ -156,7 +156,13 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
     position: relative;
     top: -3px;
 }
-
+/*已作废*/
+.order-list .myorder-box .badgeBox .myorderTime{
+    color: #767676;
+}
+.order-list .myorder-box .badgeBox .myorderStau{
+    color: #000;
+}
 .order-list .badge span{
     position: relative;
     top: -32px;
@@ -175,7 +181,7 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
 .order-list .mon-content span{
     display: inline-block;
     height: 100%;
-    line-height:2.5rem;
+    line-height:3.1rem;
     color: #000;
 }
 .order-list .num-content i{
@@ -187,7 +193,7 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
 .order-list .mon-content .myorderMon{
     display: inline-block;
     height: 100%;
-    line-height:2.5rem;
+    line-height:3.1rem;
     background-color: #fff;
     color: #fb3b4e;
     font-weight: 600;

@@ -1,89 +1,19 @@
-angular.module("myApp")
-    .service("$infoService",['$es',function($es){
-        var infoManage = $es.getConfig('custid');
-        /**
-         * 获取个人信息页面数据
-         * @returns {*}
-         */
-        this.getInfoText = function () {
-            //TESTSTART
-            return {
-                retCode:'200',
-                retMsg:'success',
-                companyName:'浙江工银聚有限公司',
-                role:'经销商',
-                companyNum:'007'
-            };
-            //TESTEND
-            var param = {};
-            return $es.java('getInfoTextBean.getInfoText',param,infoManage,1000);
-        };
-    }])
-
-    .service("$myAccountService",['$es',function($es){
-        var myAccountManage = $es.getConfig('custid');
-        /**
-         * 获取账户信息页面数据
-         * @returns {*}
-         */
-        this.getMyAccountText = function () {
-            //TESTSTART
-            return {
-                retCode:'200',
-                retMsg:'success',
-                accountNum:'zjhgtest1',
-                accountName:'zjhgtest1',
-                name:'浙江化工测试',
-                phone:'1585858558'
-            };
-            //TESTEND
-            var param = {};
-            return $es.java('myAccountBean.getMyAccountText',param,myAccountManage,1000);
-        };
-    }])
-
-    .service("$myAddressService",['$es',function($es){
-        var myAddressManage = $es.getConfig('custid');
-        /**
-         * 获取地址管理页面数据
-         * @returns {*}
-         */
-        this.getmyAddressText = function () {
-            //TESTSTART
-            return {
-                retCode:'200',
-                retMsg:'success',
-                myAddressList:[
-                    {
-                        name:"董彬",
-                        phone:"1382323232",
-                        address:"成都市下城区西湖文化广场西区萨克雷999号楼8层",
-                        state:1
-                    },
-                    {
-                        name:"范佩瑶",
-                        phone:"1566363636",
-                        address:"杭州市下城区西湖文化广场西区萨克雷",
-                        state:0
-                    },
-                    {
-                        name:"王萌",
-                        phone:"1999999999",
-                        address:"杭州市下城区西湖文化广场",
-                        state:0
-                    }
-                ]
-            };
-            //TESTEND
-            var param = {};
-            return $es.java('myAddressBean.getmyAddressText',param,myAddressManage,1000);
-        };
-    }])
-
+/**
+ * Created by chent on 2017/2/13.
+ *
+ *  UserService
+ *  用来处理用户登录信息
+ *  userLogin : 用户登录入口
+ *  changePassword : 用户修改密码接口
+ *  getValidateCode : 获取验证码接口
+ *  checkValidate : 校验验证码接口
+ *   mobileLogin  : 手机登录(后台未实现)
+ *
+ */
 
 
 //使用service来创建service对象，确保对象是单例的
-.service('UserService',['$es',function($es){
+angular.module('myApp').service('UserService',['$es',function($es){
 
     var userManage = $es.getConfig('userservice');
 
@@ -269,7 +199,7 @@ angular.module("myApp")
      * @param code
      * @returns {*}
      */
-        //TODO 手机号码登录 未做
+    //TODO 手机号码登录 未做
     this.mobileLogin = function(phoneNumber,code){
 
         //TESTSTART

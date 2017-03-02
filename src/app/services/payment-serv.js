@@ -1,12 +1,27 @@
+/**
+ * Created by chent on 2017/1/18
+ *
+ *  PaymentService
+ *  处理付款单的数据接口
+ *  getPaymentStatusArray: 获取付款单状态列表
+ * .getPaymentList : 获取付款单列表(分页)
+ *  getPaymentDetail : 获取付款单详情
+ *
+ *
+ *
+ */
 angular.module("myApp").service("PaymentService",["$es",function($es){
 
     this.getPaymentStatusArray = function(){
         return [
             {id:null,name:'全  部'},
             {id:0, name:'未付款'},
-            {id:1,name:'已付款'},
+            {id:1,name:'已付款'}
         ];
     };
+
+
+
     this.getPaymentList = function(status,page,time){
         var paymentList = [];
         var i,payment;
@@ -58,26 +73,26 @@ angular.module("myApp").service("PaymentService",["$es",function($es){
         }
     };
 
-}])
-    .service("PaymentDetailService",['$es',function($es){
 
-        this.getPaymentDetail = function(paymentId){
-            //get PaymentDetail
-            var paymentDetail = {
-                paymentId:paymentId,
-                customerName:"10010分公司",
-                customerCompany:"浙江工银聚有限公司",
-                paymentMethod:"易付",
-                paymentMoney:"222220",
-                Prepaid:"40",
-                discountCoupon:"120",
-                outofpocket:"222140",
-                customerNum:"10010",
-                creationTime:"2017-01-17  15:20:25",
-                orderTime:"2017-01-17  16:20:25"
-            };
 
-            return paymentDetail;
-        }
 
-    }]);
+    this.getPaymentDetail = function(paymentId){
+        //get PaymentDetail
+        var paymentDetail = {
+            paymentId:paymentId,
+            customerName:"10010分公司",
+            customerCompany:"浙江工银聚有限公司",
+            paymentMethod:"易付",
+            paymentMoney:"222220",
+            Prepaid:"40",
+            discountCoupon:"120",
+            outofpocket:"222140",
+            customerNum:"10010",
+            creationTime:"2017-01-17  15:20:25",
+            orderTime:"2017-01-17  16:20:25"
+        };
+
+        return paymentDetail;
+    }
+
+}]);

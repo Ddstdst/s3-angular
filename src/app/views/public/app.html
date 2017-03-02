@@ -2,7 +2,7 @@
 <head-bar></head-bar>
 
 <div class="wrapper-head">
-    <div class="home-data-wrapper back-blue" ng-controller="MyappCtrl">
+    <div class="home-data-wrapper back-blue">
         <!--订单金额Box-->
         <div class="home-top back-blue ">
             <!--订单金额-->
@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li class="fn-text-middle" ng-repeat="otherModule in otherModules">
-                    <a ng-href="{otherModule.url}">
+                    <a href="{{otherModule.url}}">
                         <i class="iconfont icon-fill1fill2 color-more"></i>
                         <span ng-bind="otherModule.name"></span>
                     </a>

@@ -1,18 +1,19 @@
 /**
- * Created by chent on 2017/1/18.
+ * Created by chent on 2017/1/18
+ *
+ *  ProductService
+ *  处理产品相关的数据接口
+ * .getProductList : 获取产品列表(分页)
+ *  getProductDetail : 获取产品详情
+ *
+ *
+ *
  */
 
 angular.module("myApp").service("ProductService",function(){
 
     var limit = 8;
 
-    this.getProductStatusArray = function(){
-        return [
-            {id:null,name:'全部产品'},
-            {id:0, name:'最近订单'},
-            {id:1,name:'收藏产品'}
-        ];
-    };
     this.getProductList = function(companyId,page,key){
 
         //TESTSTART
@@ -68,27 +69,4 @@ angular.module("myApp").service("ProductService",function(){
         return $es.java("productInfoBean.getProductDetail",param,$es.appId);
     }
 
-}).service('CompanyService',['$es',function($es){
-
-       this.getCompanyList = function(){
-
-           //TESTSTART
-           //get product
-           return [
-               {companyId:"1",companyName:'某某公司'},
-               {
-                   companyId:"2",companyName:'一个名king字特别特别特别特别长的分公司'
-               }
-           ];
-           //TESTSEND
-
-
-            var param = {};
-            var branches = $es.java("companyInfoBean.getBranchCompanyInfo",param,$es.appId,6000);
-           return branches.branchCompany;
-       };
-
-       this.setCurrentCompany = function(companyId){
-           istore.set('currentCompany',companyId);
-       };
-}]);
+});

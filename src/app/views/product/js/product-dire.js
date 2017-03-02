@@ -3,9 +3,4 @@
  */
 
 angular.module("myApp").directive("productSearch",function(){
-        return {
-            restrict:'E',
-            replace:true,
-
-        }
 });

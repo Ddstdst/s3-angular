@@ -13,10 +13,11 @@
             </div>
         </div>
 
-        <div>
+        <div class="fn-g">
             <div class="fn-text-truncate fn-u-sm-9" ng-bind="currentCompany.companyName"></div>
             <span class="fn-text-right  fn-u-sm-3" ng-click="showCompanyList()">
-            <a><i class="fn-icon-filter"></i>切换</a></span>
+                <a><i class="fn-icon-filter"></i>切换</a>
+            </span>
         </div>
     </div>
 
@@ -35,30 +36,30 @@
                     </span >
                 </div>
 
-                <div class="fn-g">
+                <div class="fn-g  prolDel-box">
                     <div class="fn-u-sm-9 fn-padding-0">
                         <!--订单详情-->
                         <div class="del-content">
-                            <div>
-                        <span>
-                            产品编号：{{product.productId}}
-                        </span>
-                                <span>
-                            规格：262dt
-                        </span>
+                            <div class="">
+                                <span class="fn-u-sm-7 fn-padding-0">
+                                    产品编号：{{product.productId}}
+                                </span>
+                                <span class="fn-u-sm-5 fn-padding-0">
+                                    规格：262dt
+                                </span>
                             </div>
                             <div>
-                        <span>
-                            价格：{{product.price}}
-                        </span>
-                                <span>
-                            分类号：1001
-                        </span>
+                                <span class="fn-u-sm-7 fn-padding-0">
+                                    价格：{{product.price}}
+                                </span>
+                                <span class="fn-u-sm-5 fn-padding-0">
+                                    分类号：1001
+                                </span>
                             </div>
                             <div>
-                        <span>
-                            分类名：{{product.productName}}
-                        </span>
+                                <span>
+                                    分类名：{{product.productName}}
+                                </span>
                             </div>
 
                         </div>

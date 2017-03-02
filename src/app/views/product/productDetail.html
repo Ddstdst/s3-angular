@@ -1,53 +1,35 @@
+<div class="page-content hide-bars-on-scroll">
+    <div class=" productDetail">
 
-<div class="page-content hide-bars-on-scroll productDetail">
-
-    <div class="proDe-top">
-        <span class="proDe-top_name">POY</span>
-        <div class="proDe-top_icon">
-            <i class="iconfont icon-shoucang"></i>
-        </div>
-        <div class="proDe-top_line"></div>
-    </div>
-
-    <div class="proDe-list">
-        <div class="proDe-list_main">
-            <div class="proDe-pic">
-                <img src="img/pro.png" alt="">
+        <div class="proDe-top">
+            <span class="proDe-top_name">POY</span>
+            <div class="proDe-top_icon">
+                <i class="iconfont icon-shoucang"></i>
             </div>
-            <div class="proDe-card">
-                <div class="card-header">产品编号：{{product.productId}}</div>
-                <div class="card-content">
-                    <div class="card-content-inner">规格：{{product.type}}</div>
-                    <div class="card-content-inner">价格：￥{{product.price}}</div>
-                    <div class="card-content-inner">分类号：{{product.length}}</div>
-                    <div class="card-content-inner">分类名：{{product.productName}}</div>
-                    <div class="card-content-inner">标准价  <span>￥{{product.price}}</span></div>
+            <div class="proDe-top_line"></div>
+        </div>
 
+        <div class="proDe-list">
+            <div class="proDe-list_main">
+                <div class="proDe-pic">
+                    <img src="views/product/img/pro.png" alt="">
                 </div>
-                <!--<div class="card-footer">xxxxxxxxxxx</div>-->
+                <div class="proDe-card">
+                    <div class="card-header">产品编号：{{product.productId}}</div>
+                    <div class="card-content">
+                        <div class="card-content-inner">规格：{{product.type}}</div>
+                        <div class="card-content-inner">价格：{{product.price|currency:'￥'}}</div>
+                        <div class="card-content-inner">分类号：{{product.length}}</div>
+                        <div class="card-content-inner">分类名：{{product.productName}}</div>
+                        <div class="card-content-inner">标准价  <span>{{product.price|currency:'￥'}}</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="proDe-btn">
+        <a ng-click="addToCart()"><div class="proDe-add">加入购物车</div></a>
+    </div>
 </div>
-<div class="proDe-btn">
-    <a ng-click="addToCart()"><div class="proDe-add">加入购物车</div></a>
-
-</div>
 
 
-<!--
-<drop-down>
-    <button class="fn-btn fn-btn-primary fn-dropdown-toggle"
-            data-fn-dropdown-toggle>
-        下拉列表 <span class="fn-icon-caret-down"></span>
-    </button>
-    <ul class="fn-dropdown-content">
-        <li class="fn-dropdown-header">标题</li>
-        <li><a href="#">1</a></li>
-        <li class="fn-active"><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li class="fn-disabled"><a href="#">4</a></li>
-        <li class="fn-divider">5</li>
-        <li><a href="#">6</a></li>
-    </ul>
-</drop-down>-->

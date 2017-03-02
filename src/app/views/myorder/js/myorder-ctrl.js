@@ -62,8 +62,8 @@ angular.module("myApp").controller("OrderListCtrl",["$scope","$rootScope","Order
 }]);
 
 
-myApp.controller("OrderDetailCtrl",["$scope","$rootScope",'$stateParams','OrderDetailService',function ($scope,$rootScope,$stateParams,OrderDetailService) {
+myApp.controller("OrderDetailCtrl",["$scope","$rootScope",'$stateParams','OrderService',function ($scope,$rootScope,$stateParams,OrderService) {
     //取得传过来的参数
     var orderId = $stateParams.orderId;
-    $scope.order = OrderDetailService.getOrderDetail(orderId);
+    $scope.order = OrderService.getOrderDetail(orderId);
 }]);

@@ -1,3 +1,13 @@
+/**
+ *
+ * DeliveryService
+ *  提货单与后台数据接口
+ *  getDeliveryStatusArray : 获取提货单状态
+ *  getDeliveryList : 获取提货单列表
+ *  getDeliveryDetail :  获取提货单详情
+ */
+
+
 angular.module("myApp").service("DeliveryService",["$es",function($es){
 
     this.getDeliveryStatusArray = function(){
@@ -52,21 +62,18 @@ angular.module("myApp").service("DeliveryService",["$es",function($es){
         }
     };
 
-}])
-    .service("DeliveryDetailService",['$es',function($es){
+    this.getDeliveryDetail = function(deliveryId){
+        //get deliveryDetail
+        var deliveryDetail = {
+            deliveryId:deliveryId,
+            deliveryTo:"张三",
+            carNum:"浙A12345",
+            telPhone:"18314676709",
+            time:"2017-01-17  15:20:25",
+            remark:"货物要准时送到"
+        };
 
-        this.getDeliveryDetail = function(deliveryId){
-            //get deliveryDetail
-            var deliveryDetail = {
-                deliveryId:deliveryId,
-                deliveryTo:"张三",
-                carNum:"浙A12345",
-                telPhone:"18314676709",
-                time:"2017-01-17  15:20:25",
-                remark:"货物要准时送到"
-            };
+        return deliveryDetail;
+    }
 
-            return deliveryDetail;
-        }
-
-    }]);
+}]);

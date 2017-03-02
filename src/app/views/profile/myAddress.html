@@ -8,15 +8,11 @@
                     <p class="dizhi">{{list.address}}</p>
                 </div>
                 <div class="edit">
-                    <!--<div class="edit_left" ng-click="check($index)">-->
-                        <!--<i class="iconfont icon-yuanxingxuanzhongfill"></i>设为默认地址-->
-                    <!--</div>-->
-
-                    <label class="fn-radio fn-secondary">
-                        <input type="radio" name="radio3" value="" data-fn-ucheck> 设为默认地址
+                    <label class="fn-radio fn-secondary" style="display: inline-block;width:45%;float: left;">
+                        <input type="radio" name="radio1" value="" data-fn-ucheck ng-checked="list.state"> 设为默认地址
                     </label>
                     <div class="edit_right">
-                        <a ui-sref="profile.editAddress({addressId:address.id})"><i class="bj"></i></a>
+                        <a ui-sref="profile.editAddress"><i class="bj"></i></a>
                         <a><i class="sc" ng-click="delete($index)"></i></a>
                     </div>
                 </div>

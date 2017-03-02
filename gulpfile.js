@@ -37,6 +37,7 @@ gulp.task("assets",function(){
 gulp.task('copy',function(){
     gulp.src('src/app/templates/*').pipe(gulp.dest('dist/templates'));
     gulp.src('src/app/iconfont/*').pipe(gulp.dest('dist/iconfont'));
+    gulp.src('src/app/services/*').pipe(gulp.dest('dist/services'));
     gulp.src('src/index.html').pipe(gulp.dest('dist'));
     gulp.src('src/404.html').pipe(gulp.dest('dist'));
 });
@@ -54,11 +55,11 @@ gulp.task('views',function(){
         fse.copySync(item.path, 'dist/views/'+item.name);
     })
 });
+
 gulp.task('replace',function(){
     config.modules.forEach(function(item) {
-        gulp.src(['dist/views/' + item.name + '/js/*.js'])
+        gulp.src(['dist/services/*.js'])
             .pipe(replace(/\/\/TESTSTART[^(//TESTSTART)]+\/\/TESTEND/g, ''))
-            .pipe(gulp.dest('dist/views/' + item.name + '/js'))
     })
 });
 
@@ -121,7 +122,7 @@ gulp.task('client-dev',function(){
 gulp.task('dev',['clean', 'assets-dev', 'copy', 'image','views','client-dev']);
 
 gulp.task('watch', function () {
-    gulp.watch(['src/index.html','src/app/templates/*'], ['copy','reload']);
+    gulp.watch(['src/index.html','src/app/templates/*','src/app/services/*'], ['copy','reload']);
     gulp.watch(['src/app/*.js','src/app/components/*','src/app/*.css'], ['client-dev','reload']);
     gulp.watch(['src/app/views/**/*.html','src/app/views/**/**/*'], ['views','reload']);
     gulp.watch(['src/index.html'], ['copy','reload']);

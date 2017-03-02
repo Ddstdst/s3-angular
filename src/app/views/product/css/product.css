@@ -1,4 +1,5 @@
 /*new orderlist*/
+.page-content{background: #fff}
 .productList-cart{position: fixed;top:0;right:10px;color:#fff;height:50px;line-height:50px;}
 .productList{background:#F2F2F2 ;}
 .productList .back-white{background: #fff;}
@@ -7,8 +8,17 @@
 /*搜索*/
 .productList .p2{padding-left:2%;}
 .productList .payment{ width:94%;border:1px solid #2d83d0;margin:3%;border-radius: 10px;color:#2d83ce;}
-.productList .payment-input{border:none; width:80%;outline: none;}
-
+.productList .payment>a{
+    display: inline-block;
+    width: 91%;
+}
+.productList .payment>a>input{
+    height: 26px;
+    line-height: 26px;
+    border:none; width:100%;
+    outline: none;
+    background: transparent;
+}
 .productList .payment-input:not([type=radio]):not([type=checkbox]), select {vertical-align:inherit;}
 .productList .payment-input input[placeholder]{  color: #ebf6ff!important;}
 .productList ul.paymentList-dropdown{  border-radius: 10px;  overflow: hidden;padding: 0;}
@@ -30,10 +40,6 @@
     display: block;
     position: relative;
 }
-.productList .myorder-tabs>li>drop-down a:hover{
-    background: #fff!important;
-    color:#2d83ce;
-}
 .productList .myorder-box ul{
     padding: .8rem;
 }
@@ -42,6 +48,9 @@
     margin-bottom: .6rem;
     overflow: hidden;
 
+}
+.productList .prolDel-box{
+    background: #fbfbfb;
 }
 .productList .myorder-box ul>li>a{
     display: block;
@@ -168,9 +177,15 @@ html{background: #f2f2f2;}
 .proDe-list{width:100%;height:13.3rem;font-size:1.2rem;overflow: hidden;}
 .proDe-list_main{width:90%;height:100%;margin:0 auto;margin-top:1.5rem;}
 .proDe-list_main .card-content-inner span{color: #fa6767;font-weight: 600;  }
-.proDe-pic{width:7.6rem;height:8.3rem;float: left;position:relative;top:0.5rem;}
+.proDe-pic{
+    width: 8.4rem;
+    height: 8.4rem;
+    float: left;
+    position: relative;
+    top: 1rem;
+}
 .proDe-pic>img{width:100%;height:100%;}
-.proDe-card{float: left;margin-left:3.33rem;}
+.proDe-card{float: left;margin-left:2.4rem;}
 .proDe-btn{width:100%;padding:1rem 1rem 0 1rem;}
 .proDe-btn div{width:100%;height:3rem;font-size:1.2rem;line-height:3rem;text-align:center;border:1px solid #76ACDD;border-radius:30px;}
 .proDe-add{background-color:#fff;color:#3183CE;}
@@ -181,19 +196,20 @@ html{background: #f2f2f2;}
 .proSear .top{height:5.53rem;background-color: #2F83CE;}
 .proSear .top_main{width:95%;height:2.86rem;margin:0 auto;position: relative;}
 .proSear .top_main>span{font-size:1.1rem;color:#E1E5EA;position:absolute;right:3%;top:64%;}
-.proSear .top_main_ip{display:inline-block;width:100%;height:2.86rem;padding-left:13%;line-height:2.86rem;border:1px solid #8CC5F7;border-radius: 10px;margin-top:1.2rem;}
+.proSear .top_main_ip{display:inline-block;width:100%;height:2.86rem;padding-left:13%;line-height:2.86rem;border:1px solid #8CC5F7;border-radius: 10px;margin-top:1.2rem;box-shadow: none;}
 .proSear .top_main .iconfont.icon-sou{font-size:1.8rem;color:#428DD2;position:absolute;top:56%;margin-top: -.3rem;left: 3%;}
 .proSear .top_main .iconfont.icon-guanbi{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #428DD2;
     position: absolute;
     top: 56%;
-    margin-top: -.3rem;
+    margin-top: -.1rem;
     right: 3%;
 }
 .proSear-category,.proSear-screen{width:90%;margin:0 auto;}
 .proSear-category-title{overflow: hidden;height:4.47rem;line-height:4.47rem;}
 .proSear-category-title>span>i{font-size: 1.8rem}
+.proSear-category-title>span>.icon-shaixuan{font-size: 1.6rem}
 .proSear-category-title span{float:left;}
 .proSear-category-title span:nth-child(2){margin-left:10px;}
 .proSear-btn{width:6rem;height:2.07rem;border:1px solid #cbcbcb;outline: none;color:#767676;background:#fafafa;border-radius:0.57rem;font-size:1rem;margin-right:2rem;}
