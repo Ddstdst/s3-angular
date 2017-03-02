@@ -6,6 +6,10 @@ angular.module("myApp").controller("cartCtrl",["$scope","CartService",function (
     $(".cart-main").css("height",scHei-90);
 
     //选框
+    $scope.productNum=0;
+    $scope.deleteProduct=function ($index) {
+        $scope.cartProducts.splice($index,1)
+    };
     var allCheckTig=true;
     $scope.allCheck=function () {
         if(allCheckTig){
@@ -27,7 +31,11 @@ angular.module("myApp").controller("cartCtrl",["$scope","CartService",function (
     var checktig=true;
     $scope.changeCheck=function ($event,$index) {
         calculatePrice()
-
+        if($scope.cartProducts[$index].isCheck){
+            $scope.productNum+=1;
+        }else{
+            $scope.productNum-=1;
+        }
     }
     $scope.reduceCartPro=function ($index) {
         if($scope.cartProducts[$index].num==1){

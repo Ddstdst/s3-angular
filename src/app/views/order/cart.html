@@ -40,7 +40,7 @@
 
                 </div>
                 <div class="cart-icon">
-                    <i class="iconfont icon-bianji" style="margin-right:1rem;color:#6AB8F5;"></i><i class="iconfont icon-Trash" style="color:#999999;"></i>
+                    <i class="iconfont icon-bianji" style="margin-right:1rem;color:#6AB8F5;"></i><i ng-click="deleteProduct($index)" class="iconfont icon-Trash" style="color:#999999;"></i>
                 </div>
 
             </div>
@@ -60,7 +60,7 @@
         </div>
         <span class="cart-total">合计：<span>{{ totalPrice|currency:"￥"}}</span></span>
     </div>
-    <a ui-sref="order.addOrder"><div class="cart-right">去结算(<span>2</span>)</div> </a>
+    <a ui-sref="order.addOrder"><div class="cart-right">去结算(<span>{{productNum}}</span>)</div> </a>
 </div>
 
 
