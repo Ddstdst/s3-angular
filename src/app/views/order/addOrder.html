@@ -4,7 +4,13 @@
             <i class="iconfont icon-qianyuefukuan"></i>选择付款方式
         </p>
         <ul class="pay_list">
-            <li><i class="iconfont icon-yuanxingweixuanzhong"></i><span>汇款</span></li>
+            <li>
+                <!--<i class="iconfont icon-yuanxingweixuanzhong"></i>-->
+                <label class="addOrder-selecPay fn-radio fn-danger">
+                    <input type="radio" name="radio" value="" data-fn-ucheck checked="checked">
+                </label>
+                <span>汇款</span>
+            </li>
             <!--<li><i class="iconfont icon-yuanxingxuanzhongfill"></i><span>承兑</span></li>
             <li><i class="iconfont icon-yuanxingxuanzhongfill"></i><span>现金支票</span></li>
             <li><i class="iconfont icon-yuanxingxuanzhongfill"></i><span>其他</span></li>-->
@@ -12,10 +18,19 @@
         <p class="title">
             <i class="title_delivery iconfont icon-daohuofangshi"></i>选择交货方式
         </p>
-        <ul class="pay_list">
-            <li><i class="iconfont icon-yuanxingweixuanzhong"></i><span>自提</span></li>
-            <li><i class="iconfont icon-yuanxingxuanzhongfill"></i><span>配送</span></li>
-        </ul>
+        <form action="">
+            <ul class="pay_list">
+                <li>
+                    <label class="addOrder-selecPay fn-radio fn-danger">
+                        <input type="radio" name="radio" value="" data-fn-ucheck checked="checked">
+                    </label><span>自提</span>
+                </li>
+                <li><label class="addOrder-selecPay fn-radio fn-danger">
+                    <input type="radio" name="radio" value="" data-fn-ucheck checked="checked">
+                </label><span>配送</span></li>
+            </ul>
+        </form>
+
         <div class="details">
             <p><span style="margin-left:2.2rem;">收货人  ：  </span><span style="margin-right:5rem;">王小二</span><span>15900001256</span></p>
             <p class="details_address"><i class="iconfont icon-shouhuodizhi"></i><span style="margin-left:1rem;">配送地址  ：  </span>浙江省杭州市下城区新市街153号</p>
