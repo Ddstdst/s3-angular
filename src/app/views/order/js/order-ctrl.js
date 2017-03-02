@@ -80,7 +80,7 @@ myApp.controller("addOrderCtrl",["$scope",'$stateParams',function ($scope,$state
 }]);
 myApp.controller("orderConfirmCtrl",["$scope",'$stateParams',function ($scope,$stateParams) {
     var scHei = document.documentElement.offsetHeight||document.body.offsetHeight;
-    $(".orderconfirm").css("height",scHei-54-parseFloat($(".orderconfirm-bottom").css("height")))
+    $(".orderconfirm").css("height",scHei-55-parseFloat($(".orderconfirm-bottom").css("height")))
 }]);
 /*
 myApp.controller("orderCatCtrl",["$scope","$rootScope",'$stateParams','ProductService',function ($scope,$rootScope,$stateParams,ProductService) {
