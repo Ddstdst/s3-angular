@@ -2,8 +2,6 @@
  * Created by chent on 2017/1/18.
  */
 angular.module("myApp").controller("cartCtrl",["$scope","CartService",function ($scope,CartService) {
-    /*var scHei = document.documentElement.offsetHeight||document.body.offsetHeight;
-     $(".cart-main").css("height",scHei-90);*/
     $(function () {
         var scHei = document.documentElement.offsetHeight||document.body.offsetHeight
         $(".cart-main").css("height",scHei-parseFloat($("#topbar").css("height"))-48)
@@ -82,12 +80,6 @@ angular.module("myApp").controller("cartCtrl",["$scope","CartService",function (
 
 }]);
 myApp.controller("addOrderCtrl",["$scope",'$stateParams',function ($scope,$stateParams) {
-    /*//取得传过来的参数
-     var productId = $stateParams.productId;
-     // console.log();
-     $scope.product = ProductService.getProductDetail(productId);*/
-    /*var scHei = document.documentElement.offsetHeight||document.body.offsetHeight;
-    $(".addO").css("height",scHei-95)*/
     $(function () {
         var scHei = document.documentElement.offsetHeight||document.body.offsetHeight
         $(".addO").css("height",scHei-parseFloat($("#topbar").css("height"))-48)
@@ -96,21 +88,12 @@ myApp.controller("addOrderCtrl",["$scope",'$stateParams',function ($scope,$state
     $scope.changeCheck=function ($event) {
         $($event.target).attr("class","iconfont icon-queren").css("color","#1587cd")
         $($event.target).parent().siblings().find("i").css("color","#c3c3c3").attr("class","iconfont icon-yuanquan")
-
     }
 }]);
 myApp.controller("orderConfirmCtrl",["$scope",'$stateParams',function ($scope,$stateParams) {
-    /*var scHei = document.documentElement.offsetHeight||document.body.offsetHeight;
-    $(".orderconfirm").css("height",scHei-55-parseFloat($(".orderconfirm-bottom").css("height")))*/
     $(function () {
         var scHei = document.documentElement.offsetHeight||document.body.offsetHeight
         $(".orderconfirm").css("height",scHei-parseFloat($("#topbar").css("height"))-49)
     })
 }]);
-/*
- myApp.controller("orderCatCtrl",["$scope","$rootScope",'$stateParams','ProductService',function ($scope,$rootScope,$stateParams,ProductService) {
- //取得传过来的参数
- var productId = $stateParams.productId;
- // console.log();
- $scope.product = ProductService.getProductDetail(productId);
- }]);*/
+
