@@ -48,20 +48,20 @@
     </ul>
 
 </div>
-<div class="cart-bottom">
-<div class="cart-bottom">
-    <div class="cart-left">
-        <div class="cart-all_check">
-            <!--<i class="iconfont icon-yuanxingweixuanzhong" ng-click="allCheck($event)"></i>-->
-            <label class="fn-checkbox fn-danger">
-                <input type="checkbox" ng-model="isAllCheck" value="" data-fn-ucheck  ng-click="allCheck()">
-            </label>
-            <span class="cart-all_check-span">全选</span>
+
+    <div class="cart-bottom">
+        <div class="cart-left">
+            <div class="cart-all_check">
+                <!--<i class="iconfont icon-yuanxingweixuanzhong" ng-click="allCheck($event)"></i>-->
+                <label class="fn-checkbox fn-danger">
+                    <input type="checkbox" ng-model="isAllCheck" value="" data-fn-ucheck  ng-click="allCheck()">
+                </label>
+                <span class="cart-all_check-span">全选</span>
+            </div>
+            <span class="cart-total">合计：<span>{{ totalPrice|currency:"￥"}}</span></span>
         </div>
-        <span class="cart-total">合计：<span>{{ totalPrice|currency:"￥"}}</span></span>
+        <a ui-sref="order.addOrder"><div class="cart-right">去结算(<span>{{productNum}}</span>)</div> </a>
     </div>
-    <a ui-sref="order.addOrder"><div class="cart-right">去结算(<span>{{productNum}}</span>)</div> </a>
-</div>
 
 
 

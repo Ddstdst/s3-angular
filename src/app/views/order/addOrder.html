@@ -1,15 +1,15 @@
 <div class="addO">
     <div class="payWay main">
         <p class="title">
-            <i class="iconfont icon-qianyuefukuan"></i>选择付款方式
+            <i class="addOrder-i iconfont icon-qianyuefukuan"></i>选择付款方式
         </p>
         <ul class="pay_list">
             <li>
                 <!--<i class="iconfont icon-yuanxingweixuanzhong"></i>-->
-                <label class="addOrder-selecPay fn-radio fn-danger">
+                <!--<label class="addOrder-selecPay fn-radio fn-danger">
                     <input type="radio" name="radio" value="" data-fn-ucheck checked="checked">
-                </label>
-                <span>汇款</span>
+                </label>-->
+                <i class="iconfont icon-queren" style="color:#1587cd"></i><span>汇款</span>
             </li>
             <!--<li><i class="iconfont icon-yuanxingxuanzhongfill"></i><span>承兑</span></li>
             <li><i class="iconfont icon-yuanxingxuanzhongfill"></i><span>现金支票</span></li>
@@ -18,29 +18,26 @@
         <p class="title">
             <i class="title_delivery iconfont icon-daohuofangshi"></i>选择交货方式
         </p>
-        <form action="">
+
             <ul class="pay_list">
                 <li>
-                    <label class="addOrder-selecPay fn-radio fn-danger">
-                        <input type="radio" name="radio" value="" data-fn-ucheck checked="checked">
-                    </label><span>自提</span>
+                    <i ng-click="changeCheck($event)" class="iconfont icon-yuanquan"></i><span>自提</span>
                 </li>
-                <li><label class="addOrder-selecPay fn-radio fn-danger">
-                    <input type="radio" name="radio" value="" data-fn-ucheck checked="checked">
-                </label><span>配送</span></li>
+                <li><i ng-click="changeCheck($event)" class="iconfont icon-yuanquan"></i><span>配送</span></li>
             </ul>
-        </form>
+
 
         <div class="details">
             <p><span style="margin-left:2.2rem;">收货人  ：  </span><span style="margin-right:5rem;">王小二</span><span>15900001256</span></p>
             <p class="details_address"><i class="iconfont icon-shouhuodizhi"></i><span style="margin-left:1rem;">配送地址  ：  </span>浙江省杭州市下城区新市街153号</p>
+            <a ui-sref="profile.myAddress"><i class="addOrder-turnDiZhi iconfont icon-fanhui"></i></a>
         </div>
         <div class="details_line"></div>
         <p class="title">
             <i class="iconfont icon-riqi"></i>要货日期
         </p>
         <div class="details_time">
-            <input type="text" class="fn-form-field" placeholder="日历组件" data-fn-datepicker readonly="readonly">
+            <input type="text" class="fn-form-field" placeholder="" data-fn-datepicker readonly="readonly">
             <i class="iconfont icon-riqi1"></i>
         </div>
         <!--<div class="fn-input-group fn-datepicker-date" data-fn-datepicker="{format: 'dd-mm-yyyy'}">
